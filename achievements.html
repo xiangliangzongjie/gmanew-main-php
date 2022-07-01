@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>数字营销创意广告</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .thumbnail:hover{transform:translate(0px,-20px);transition:all 0.3s linear;}
+    </style>
+
+  </head>
+  <body style="position:relative;width:100%;height:100%;">
+    <!-- 导航栏 -->
+    <div class="top"></div>
+    <!-- 图片 -->
+    <div>
+        <img src="img/topban2s.jpg" style="width: 100%;">
+    </div>
+    <!-- 品牌创意广告 -->
+    <div class="row">
+        <div class="col-md-2" ></div>
+        <div class="col-md-8 col-xs-12 text-center" style="padding:50px;">
+            <img src="img/achievements.png">
+            <h1 >绩效营销</h1>
+            <h4 >绩效营销丨LEADS GENERATION</h4>
+            <h4 class="text-left" style="line-height: 30px;">
+                广告投放的主要目的是形成曝光及转化，这是大部分品牌最为看重的部分，绩效营销因此诞生。为完成绩效，需要广告公司在策划时，品牌需求的定制化是其中最为重要的部分，紧贴绩效需求，选择有实际效果的渠道和方式进行广告行为，对agency和品牌方都是相互负责的做法。<br />
+                专业的策划与执行团队，在实行推广计划前，精准预估绩效，并在执行后严格按照绩效进行验收。GMA奉行“以实效为目标”的理念，力求每次推广服务都为客户带来实际收益。
+            </h4>
+        </div>
+        <div class="col-md-2" ></div>
+    </div>
+    <div class="row" style="padding:0px 20%;cursor:pointer">
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img src="img/wewood.png" alt="WEWOOD">
+                <div class="caption">
+                    <h3>WEWOOD</h3>
+                    <p>绩效营销案例</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img src="img/volley.jpg" alt="VOLLEY">
+                <div class="caption">
+                    <h3>VOLLEY</h3>
+                    <p>绩效营销案例</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img src="img/ROSSMANN.jpg" alt="ROSSMANN">
+                <div class="caption">
+                    <h3>ROSSMANN</h3>
+                    <p>绩效营销案例</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 下面图片 + 文字 -->
+
+    <!-- connect with us -->
+    <div class="connectwithus"></div>
+    <!-- 底部 -->
+    <div class="bottom"></div>
+  </body>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      $('.top').load('navbar.html');
+      $('.bottom').load('bottom.html');
+    });
+  </script>
+</html>

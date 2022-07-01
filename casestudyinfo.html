@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>数字营销创意广告</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+      /* .swiper-container { width: 100%; height: auto; }   */
+
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+  
+      body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+      }
+  
+      .swiper-slide {
+        background-size: cover;
+        background-position: center;
+      }
+  
+      .gallery-top {
+        height: 80%;
+        width: 100%;
+      }
+  
+      .gallery-thumbs {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+      }
+  
+      .gallery-thumbs .swiper-slide {
+        width: 25%;
+        height: 100%;
+      }
+  
+      .gallery-thumbs .swiper-slide-thumb-active {
+        border:2px solid #666;
+      }
+    </style>
+
+  </head>
+  <body style="position:relative;width:100%;height:100%;">
+    <!-- 导航栏 -->
+    <div class="top"></div>
+    <!-- 图片 -->
+    <img src="img/topban3.jpg" style="width: 100%;">
+    <!-- 列表 -->
+    <div class="caseStudyInfo">
+      <h1 class="text-center brandName"></h1>
+      <div class="row" style="padding:50px;">
+        <!-- 滚动条 -->
+        <div class="col-md-6 col-xs-12">
+            <!-- swiper -->
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/casestudy10_3.png" style="width:100%;"></div>
+                <div class="swiper-slide"><img src="img/casestudy10_4.png" style="width:100%;"></div>
+                <div class="swiper-slide"><img src="img/casestudy10_5.png" style="width:100%;"></div>
+              </div>
+            </div>
+            <div class="swiper-container gallery-thumbs" style="border:1px solid #dfdfdf;padding:10px;">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/casestudy10_3.png" style="width:100%;"></div>
+                <div class="swiper-slide"><img src="img/casestudy10_4.png" style="width:100%;"></div>
+                <div class="swiper-slide"><img src="img/casestudy10_5.png" style="width:100%;"></div>
+              </div>
+            </div>
+        </div>
+        <!-- 文字 -->
+        <div class="col-md-6 col-xs-12">
+          <div class="background"></div>
+          <div class="introduce"></div>
+          <div class="target"></div>
+          <div class="work"></div>
+          <div class="summary"></div>
+        </div>
+      </div>
+
+    </div>
+    <!-- connect with us -->
+    <div class="connectwithus"></div>
+    <!-- 底部 -->
+    <div class="bottom"></div>
+  </body>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+
+    $(document).ready(function(){
+      $('.top').load('navbar.html');
+      $('.bottom').load('bottom.html');
+
+      //取数据
+      var caseStudyIPage=JSON.parse(localStorage.getItem("caseStudyIPage"));
+      var caseStudyId=localStorage.getItem("caseStudyId");
+      for(var i=0;i<caseStudyIPage.data.length;i++){
+        if(caseStudyId==caseStudyIPage.data[i].id){
+          var info=caseStudyIPage.data[i];
+          var brandName=info.brandName;
+          var background="<h3>背景：</h3><p>"+info.background+"</p>";
+          var introduce="<h3>公司介绍：</h3><p>"+info.introduce+"</p>";
+          var target="<h3>目标：</h3><p>"+info.target+"</p>";
+          var work="<h3>我们的工作：</h3><p>"+info.work+"</p>";
+          var summary="<h3>总结：</h3><p>"+info.summary+"</p>";
+          var image1='<div class="swiper-slide"><img src="'+info.images1+'" style="width:100%;"></div>';
+          var image2='<div class="swiper-slide"><img src="'+info.images2+'" style="width:100%;"></div>';
+          var image3='<div class="swiper-slide"><img src="'+info.images3+'" style="width:100%;"></div>';
+
+          $(".brandName").html(brandName);
+          if(info.background!=""){
+            $(".background").html(background);
+          }
+          $(".introduce").html(introduce);
+          $(".target").html(target);
+          $(".work").html(work);
+          $(".summary").html(summary);
+          var swiperimg=image1+image2+image3
+          $(".swiper-wrapper").html(swiperimg);
+          break;
+        }
+      }
+
+      // 缩略图
+      var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+      });
+      // 滚动图
+      var galleryTop = new Swiper('.gallery-top', {
+        autoplay: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+          swiper: galleryThumbs
+        }
+      });
+    });
+
+    
+  
+  </script>
+</html>

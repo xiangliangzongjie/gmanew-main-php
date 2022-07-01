@@ -1,0 +1,23 @@
+<html lang="zh-CN">
+    <body>
+        <canvas id = rain ></canvas>
+    </body>
+    <script>
+        let pen = rain.getContext('2d'), ys=Array(parseInt(rain.width / 5)).fill(0);
+        let random_char = ()=>{return String.fromCharCode(parseInt(65 + Math.random() * (90-65)))}
+        setInterval(function(){
+            pen.fillStyle = "rgba(0,0,0,0.05)"
+            pen.fillRect(0,0,rain.width,rain.height)
+            pen.fillStyle = "#0f0"
+            pen.font="5px Arial";
+            ys.forEach((y,i) => {
+                pen.fillText(random_char(), i * 5, y)
+                ys[i] = Math.random() < 0.05 ? 0 : y + 10
+            })
+        },1000 / 20)
+    </script>
+    <style>
+        body{margin:0;padding:0;border:0;}
+        canvas{width:100%;height:100vh;}
+    </style>
+</html>

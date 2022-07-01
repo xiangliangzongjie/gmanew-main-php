@@ -1,0 +1,42 @@
+<div id="animationBody">
+    <div id="animationFont">数字媒体创意广告</div>
+</div>
+<style>
+    body{margin:0;padding:0;border:0;height:100vh;}
+    #animationBody{
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        background-color: #c8c8c8;
+    }
+    #animationBody #animationFont{
+        font-size:3em;
+        font-weight: bolder;
+        color:#000;
+        position:relative;
+        padding:0px;
+    }
+    #animationBody #animationFont::after{
+        content: "数字媒体创意广告";
+        color: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        clip-path: ellipse(50px 50px at 0% 50%);
+        animation: kf_spotlight 5s infinite;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: url('img/colorbg.jpg');
+    }
+    @keyframes kf_spotlight{
+        0%{
+            clip-path:ellipse(50px 50px at 0% 50%);
+        }
+        50%{
+            clip-path:ellipse(50px 50px at 100% 50%);
+        }
+        0%{
+            clip-path:ellipse(50px 50px at 0% 50%);
+        }
+    }
+</style>

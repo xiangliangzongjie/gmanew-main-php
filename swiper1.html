@@ -1,0 +1,43 @@
+<div class="swiper1">
+<!-- Slider main container -->
+    <div class="swiper-container">
+    <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+            <div class="swiper-slide" id="slide1"><img src="img/bizhi1.jpg" style="width:100%;height:auto;"></div>
+            <div class="swiper-slide" id="slide2"><img src="img/bizhi2.jpg" style="width:100%;height:auto;"></div>
+            <div class="swiper-slide" id="slide3"><img src="img/bizhi3.jpg" style="width:100%;height:auto;"></div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+</div> 
+
+<script> 
+     const swiper1 = new Swiper('.swiper1 .swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+        // If we need pagination
+        pagination: {
+            el: '.swiper1 .swiper-pagination',
+        },
+        // Navigation arrows
+        // navigation: {
+        //     nextEl: '.swiper1 .swiper-button-next',
+        //     prevEl: '.swiper1 .swiper-button-prev',
+        // },
+        // And if we need scrollbar
+        // scrollbar: {
+        //     el: '.swiper1 .swiper-scrollbar',
+        // },
+        });
+</script>

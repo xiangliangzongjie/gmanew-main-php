@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>数字营销创意广告</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .thumbnail:hover{transform:translate(0px,-20px);transition:all 0.3s linear;}
+    </style>
+
+  </head>
+  <body style="position:relative;width:100%;height:100%;">
+    <!-- 导航栏 -->
+    <div class="top"></div>
+    <!-- 图片 -->
+    <div>
+        <img src="img/topban2s.jpg" style="width: 100%;">
+    </div>
+    <!-- 品牌创意广告 -->
+    <div class="row">
+        <div class="col-md-2" ></div>
+        <div class="col-md-8 col-xs-12 text-center" style="padding:50px;">
+            <img src="img/interactive.png">
+            <h1 >互动营销</h1>
+            <h4 >互动营销丨事件营销丨社交平台运营丨互联网广告</h4>
+            <h4 class="text-left" style="line-height: 30px;">
+                互动营销是通过与粉丝间的互动，传递品牌信息的推广方法；事件营销是通过制造一个热门的事件或者话题，吸引粉丝参与讨论，进而引入产品的推广方法。<br />
+                品牌需要定期与粉丝进行互动，增加粉丝粘性，塑造具有亲和力的品牌形象，以此加深与受众之间的联系。<br />
+                我们拥有专业的策划团队，在互动营销上有着丰富的经验，可以为品牌提供线上活动策划。我们善于运用热门的社交平台，为品牌提供一个良好的交流环境，与消费者进行互动，提高品牌形象。<br />
+            </h4>
+        </div>
+        <div class="col-md-2" ></div>
+    </div>
+    <div class="row" style="padding:0px 20%;cursor:pointer">
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img src="img/tkxdh.png" alt="脱口秀大会">
+                <div class="caption">
+                    <h3>脱口秀大会</h3>
+                    <p>互动营销</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img src="img/lg.png" alt="来伊份">
+                <div class="caption">
+                    <h3>来伊份</h3>
+                    <p>互动营销</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="thumbnail">
+                <img src="img/ROSSMANN.jpg" alt="ROSSMANN">
+                <div class="caption">
+                    <h3>ROSSMANN</h3>
+                    <p>互动营销</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!-- 下面图片 + 文字 -->
+
+    <!-- connect with us -->
+    <div class="connectwithus"></div>
+    <!-- 底部 -->
+    <div class="bottom"></div>
+  </body>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      $('.top').load('navbar.html');
+      $('.bottom').load('bottom.html');
+    });
+  
+  </script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>数字营销创意广告</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=1.0&ak=MYi1NiYgZQdSho6PRGs8P9XSAkMmySAi"></script>
+
+
+  </head>
+  <body style="position:relative;width:100%;height:100%;">
+    <!-- 导航栏 -->
+    <div class="top"></div>
+    <!-- 上面图片 + 文字 -->
+    <div class="row" style="padding:20px;">
+        <div class="col-md-6 col-xs-12">
+            <img src="img/cimg1.jpg" style="width: 100%;">
+        </div>
+        <div class="col-md-6 col-xs-12 text-right" style="font-size:14px;padding:50px;line-height:30px;" >
+          <h2>SHANGHAI 上海</h2>
+          <div>上海胜仕营销策划有限公司</div>
+          <div>静安区 江场路1377号</div>
+          <div>绿地中央广场 1座 2001室</div>
+          <div>(021) 6306 1853-104</div>
+          <div>GMA-CHINA.COM.CN</div>
+          <div><a href="mailto:BD@GMA-CHINA.COM.CN">BD@GMA-CHINA.COM.CN</a></div>
+        </div>
+    </div>
+    <!-- 百度地图 -->
+    <div id="mapbaidu" style="width: 100%;height:500px;margin:20px;"> </div>
+
+    <!-- 下面图片 + 文字 -->
+    <div class="row" style="padding:20px;">
+        <div class="col-md-6 col-xs-12 " style="font-size:14px;padding:50px;line-height:30px;" >
+            <h2>PARIS 巴黎</h2>
+            <div><a href="http://AGENCY.MARKETINGTOCHINA.COM" target="_blank">AGENCY.MARKETINGTOCHINA.COM</a></div>
+            <div><a href="mailto:AGENCY@GMA-CHINA.COM.CN">AGENCY@GMA-CHINA.COM.CN</a></div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <img src="img/cimg2.jpg" style="width: 100%;">
+        </div>
+    </div>
+    <!-- connect with us -->
+    <div class="connectwithus"></div>
+    <!-- 底部 -->
+    <div class="bottom"></div>
+  </body>
+  <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+  <script src="js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function(){
+      $('.top').load('navbar.html');
+      $('.connectwithus').load('connectwithus.html');
+      $('.bottom').load('bottom.html');
+    });
+    // 百度地图API功能
+    var map = new BMapGL.Map("mapbaidu");    // 创建Map实例
+    map.centerAndZoom(new BMapGL.Point(116.331398,39.897445), 12);
+        //创建地址解析器实例
+    var myGeo = new BMapGL.Geocoder();
+    // 将地址解析结果显示在地图上，并调整地图视野
+    myGeo.getPoint('上海市静安区江场路1377号绿地中央广场1座2001室', function(point){
+        if(point){
+            map.centerAndZoom(point, 18);
+            map.addOverlay(new BMapGL.Marker(point, {title: '上海胜仕营销策划有限公司'}))
+            var opts = {
+            width: 200,
+            height: 100,
+            title: '上海胜仕营销策划有限公司'
+          };
+          var infoWindow = new BMapGL.InfoWindow('地址：上海市 静安区 江场路1377号 绿地中央广场1座2001室', opts);
+          map.openInfoWindow(infoWindow,point);
+        }else{
+            alert('您选择的地址没有解析到结果！');
+        }
+    }, '上海市')
+    
+  
+  </script>
+</html>

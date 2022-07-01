@@ -1,0 +1,70 @@
+<div style="display: flex;padding:0px;margin: 0px;">
+    <div class="swiper2" style="width:50%;padding:0px;margin: 0px;border:0px;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1"><img src="img/left1.jpg" style="width: 100%;"></div>
+            <div class="swiper-slide" id="slide2"><img src="img/left2.jpg" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+    <div style="width:50%;padding:0px;margin: 0px;">
+        <div class="swiper3" style="width:100%;padding:0px;margin: 0px;border:0px;">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide" id="slide1"><img src="img/right_top1.jpg" style="width:100%;"></div>
+                <div class="swiper-slide" id="slide2"><img src="img/right_top2.jpg" style="width:100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div class="swiper4" style="width:50%;padding:0px;margin: 0px;border:0px;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide1"><img src="img/middle1.jpg" style="width:100%;"></div>
+                    <div class="swiper-slide" id="slide2"><img src="img/middle2.jpg" style="width:100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper5" style="width:50%;padding:0px;margin: 0px;border:0px;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                    <div class="swiper-slide" id="slide1"><img src="img/right_bot1.jpg" style="width:100%;"></div>
+                    <div class="swiper-slide" id="slide2"><img src="img/right_bot2.jpg" style="width:100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+.swiper-container {
+    overflow: hidden;
+}
+
+</style>
+<script> 
+     const swiper2 = new Swiper('.swiper2 .swiper-container', {
+    // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+    });
+    const swiper3 = new Swiper('.swiper3 .swiper-container', {
+    // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+    });
+    const swiper4 = new Swiper('.swiper4 .swiper-container', {
+    // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+    });
+    const swiper5 = new Swiper('.swiper5 .swiper-container', {
+    // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        autoplay: true,
+    });
+</script>
